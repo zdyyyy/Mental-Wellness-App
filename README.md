@@ -9,7 +9,7 @@ MindLift is a wellness web application for journaling, mood tracking, music ther
 - **Music** — Browse genres, play songs, and get recommendations based on current mood
 - **Mood insights** — View mood history, statistics, and next-day mood predictions
 - **AI companion** — Supportive chat powered by OpenAI (simple fallback replies without a key)
-- **RabbitMQ** (optional) — Async mood events after diary or chat updates, consumed to sync the user's current mood
+- **RabbitMQ** — Async mood events after diary or chat updates, consumed to sync the user's current mood
 
 The home screen uses a **2×2** layout: Music, Diary, Chat, and Mood Insights.
 
