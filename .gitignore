@@ -17,6 +17,7 @@ local.properties
 
 # Web rewrite
 README-WEB.md
+backend/README.md
 backend/target/
 backend/data/
 frontend/node_modules/
