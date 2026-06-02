@@ -1,4 +1,4 @@
-# MindLift
+# Mental Wellness
 
 MindLift is a wellness web application for journaling, mood tracking, music therapy, and AI companion chat. It is a React + Ruby on Rails rewrite of the original Android **YogoPoseDetection** project. The web version focuses on mental wellness features and does not include yoga pose detection.
 
