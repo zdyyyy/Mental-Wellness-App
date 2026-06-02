@@ -1,0 +1,28 @@
+default: &default
+  jwt_secret: <%= ENV.fetch("MINDLIFT_JWT_SECRET", "mindlift-dev-secret-change-in-production-min-32-chars") %>
+  jwt_expiration_ms: 86400000
+  openai_api_key: <%= ENV["OPENAI_API_KEY"] %>
+  openai_base_url: https://api.openai.com/v1
+  rabbitmq:
+    enabled: <%= ENV.fetch("MINDLIFT_RABBITMQ_ENABLED", "true") == "true" %>
+    url: <%= ENV.fetch("RABBITMQ_URL", "amqp://guest:guest@localhost:5672") %>
+    exchange: mindlift.events
+    mood_recorded_queue: mindlift.mood.recorded
+    mood_recorded_routing_key: mood.recorded
+
+development:
+  <<: *default
+  rabbitmq:
+    enabled: <%= ENV.fetch("MINDLIFT_RABBITMQ_ENABLED", "false") == "true" %>
+    url: <%= ENV.fetch("RABBITMQ_URL", "amqp://guest:guest@localhost:5672") %>
+    exchange: mindlift.events
+    mood_recorded_queue: mindlift.mood.recorded
+    mood_recorded_routing_key: mood.recorded
+
+test:
+  <<: *default
+  rabbitmq:
+    enabled: false
+
+production:
+  <<: *default

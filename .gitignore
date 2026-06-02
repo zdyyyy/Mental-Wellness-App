@@ -14,3 +14,10 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Web rewrite
+README-WEB.md
+backend/target/
+backend/data/
+frontend/node_modules/
+frontend/dist/
